@@ -1,5 +1,8 @@
+.agents
+.codex
 .ruff_cache
 .task
 .venv
 __pycache__
+site/
 uv.lock

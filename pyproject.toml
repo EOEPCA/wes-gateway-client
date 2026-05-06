@@ -7,7 +7,7 @@ name = "wes-api-client"
 dynamic = ["version"]
 description = 'WES API Client'
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = "MIT"
 keywords = []
 authors = [
@@ -16,20 +16,22 @@ authors = [
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  "attrs==26.1.0",
+  "httpx==0.28.1",
+  "python-dateutil==2.9.0.post0",
+]
 
 [project.urls]
-Documentation = "https://github.com/stripodi/wes-api-client#readme"
-Issues = "https://github.com/stripodi/wes-api-client/issues"
-Source = "https://github.com/stripodi/wes-api-client"
+Documentation = "https://github.com/EOEPCA/wes-gateway-client#readme"
+Issues = "https://github.com/EOEPCA/wes-gateway-client/issues"
+Source = "https://github.com/EOEPCA/wes-gateway-client"
 
 [tool.hatch.version]
 path = "src/wes_api_client/__about__.py"
