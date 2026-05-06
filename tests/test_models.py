@@ -57,9 +57,9 @@ def test_run_workflow_body_builds_multipart_parts() -> None:
         (None, b"test-suite", "text/plain"),
     ) in parts
 
-    workflow_attachment = [
-        part for part in parts if part[0] == "workflow_attachment"
-    ][0]
+    workflow_attachment = [part for part in parts if part[0] == "workflow_attachment"][
+        0
+    ]
     assert workflow_attachment[1] == ("workflow.cwl", payload, "text/plain")
 
 
