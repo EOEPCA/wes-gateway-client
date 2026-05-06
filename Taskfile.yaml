@@ -15,6 +15,7 @@
 version: '3'
 
 includes:
+  quality: https://raw.githubusercontent.com/Terradue/taskfile-utils/refs/heads/main/quality.yaml
   openapi: https://raw.githubusercontent.com/Terradue/taskfile-utils/refs/heads/main/openapi.yaml
 
 tasks:
