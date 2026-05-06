@@ -1,0 +1,30 @@
+version: '3'
+
+includes:
+  openapi: https://raw.githubusercontent.com/Terradue/taskfile-utils/refs/heads/main/openapi.yaml
+
+tasks:
+
+  download_openapi:
+    internal: true
+    status:
+    - '[ -f schemas/openapi.json ]'
+    cmds:
+    - mkdir -p schemas
+    - |
+      wget -O schemas/openapi.json \
+      https://ga4gh.github.io/workflow-execution-service-schemas/openapi.json 
+
+  default:
+    deps:
+    - download_openapi
+    cmds:
+    # - |
+    #   hatch new \
+    #   --init \
+    #   "WES API Client" \
+    #   .
+    - task: openapi:generate_client
+      vars:
+        API: 'schemas/openapi.json'
+        OUTPUT: './src/wes_api_client'
