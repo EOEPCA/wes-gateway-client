@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = 'WES API Client'
 readme = "README.md"
 requires-python = ">=3.10"
-license = "MIT"
+license = "Apache-2.0"
 keywords = []
 authors = [
   { name = "stripodi", email = "simone.tripodi@terradue.com" },
@@ -84,7 +84,6 @@ dependencies = [
   "pytest==9.0.2",
   "ruff==0.15.6",
 ]
-
 
 [tool.hatch.envs.dev.scripts]
 lint = "ruff format src tests"
