@@ -27,7 +27,7 @@ classifiers = [
 dependencies = [
   "attrs==26.1.0",
   "httpx==0.28.1",
-  "python-dateutil==2.9.0.post0",
+  "python-dateutil==3.0.0",
 ]
 
 [project.urls]
